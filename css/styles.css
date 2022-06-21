@@ -7,6 +7,7 @@
   --section-light-background: #f5f4fa;
   --team-card-bg: #ffffff;
   --filter-button-bg: #f5f4fa;
+  --card-set-gap: 30px;
 }
 
 body {
@@ -21,6 +22,12 @@ h2,
 h3,
 p {
   margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -209,7 +216,6 @@ p {
   font-size: 16px;
   line-height: 1.19;
 }
-
 .team-card-text {
   color: var(--text-color);
   font-size: 16px;
@@ -282,9 +288,10 @@ p {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.card-content {
+  padding: 20px 24px;
+}
 .card-title {
-  margin-left: 24px;
-  margin-right: 24px;
   margin-bottom: 4px;
   font-size: 18px;
   line-height: 2;
@@ -294,30 +301,18 @@ p {
 .portfolio__list {
   display: flex;
   flex-wrap: wrap;
+  margin-top: calc(-1 * var(--card-set-gap));
+  margin-left: calc(-1 * var(--card-set-gap));
 }
 .portfolio__item {
   background: var(--team-card-bg);
   border: 1px solid #eeeeee;
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-}
-.portfolio__item:nth-child(3n) {
-  margin-right: 0px;
-}
-
-.portfolio__item:nth-last-child(-n + 3) {
-  margin-bottom: 0px;
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
 }
 .portfolio__item p {
-  margin-left: 24px;
-  margin-right: 24px;
   font-size: 16px;
   line-height: 1.88;
   color: var(--text-color);
-}
-
-.portfolio__img {
-  margin-bottom: 20px;
 }
