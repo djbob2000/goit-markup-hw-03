@@ -51,8 +51,6 @@ img {
   margin-right: auto;
 }
 .header {
-  padding-top: 24px;
-  padding-bottom: 25px;
   border-bottom: 1px solid #ececec;
 }
 .logo {
@@ -77,6 +75,9 @@ img {
   align-items: center;
 }
 .nav-link {
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -114,6 +115,9 @@ img {
   padding: 0;
 }
 .contacts {
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -135,9 +139,9 @@ img {
 }
 
 .hero-title {
-  display: inline-block;
-  padding-right: 236px;
-  padding-left: 236px;
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
   font-family: 'Roboto';
   font-weight: 900;
@@ -176,10 +180,13 @@ img {
   line-height: 1.14;
   text-transform: uppercase;
 }
+.features-list-item {
+  flex-basis: 270px;
+}
 
-.features-list-item,
-.our-work-list-item,
-.team-card {
+.features-list-item:not(:last-child),
+.our-work-list-item:not(:last-child),
+.team-card:not(:last-child) {
   margin-right: 30px;
 }
 .features-list-item p {
@@ -199,16 +206,16 @@ img {
 }
 
 .team-card {
-  width: calc((100% - 90) / 4);
-  padding-bottom: 30px;
+  width: calc((100% - 3 * var(--card-set-gap)) / 4);
   background: #ffffff;
   text-align: center;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.team-card-img {
-  margin-bottom: 30px;
+.team-thumb {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .team-card-name {
   margin-bottom: 10px;
@@ -227,6 +234,7 @@ img {
   padding-bottom: 60px;
 }
 .footer-logo {
+  margin-right: 0;
   margin-bottom: 20px;
   color: #ffffff;
 }
