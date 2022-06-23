@@ -50,6 +50,10 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .header {
   border-bottom: 1px solid #ececec;
 }
@@ -194,10 +198,7 @@ img {
   color: var(--text-color);
   line-height: 1.71;
 }
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
+
 .section-our-work {
   padding-top: 0;
 }
